@@ -1,71 +1,117 @@
-# hypermd-react: A Decentralized Markdown Editor
+# HyperMD React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
 
-## Available Scripts
+A lightweight, client‑side Markdown editor and previewer built with **React 18**, **marked**, and **highlight.js**.
 
-In the project directory, you can run:
+---
 
-### `npm start; npm start`
+## Table of Contents
+- [Features](#features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Available Scripts](#available-scripts)
+- [Project Structure](#project-structure)
+- [Built With](#built-with)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+- **Live preview**: edit Markdown on the left, see HTML on the right in real time.  
+- **Syntax highlighting** for code blocks powered by *highlight.js*.  
+- **Git‑style links & checkboxes** via *marked* extensions.  
+- **Zero‑config**: bootstrapped with Create React App for instant development.  
+- **Modern routing** with React Router v6.  
+- **Unique note IDs** generated with *uuid*.  
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
+*(Coming soon – screenshots or a live link here)*
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- **Node.js** ≥ 18  
+- **npm** ≥ 9 (shipped with Node) or **yarn** ≥ 1.22
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+```bash
+git clone https://github.com/<your‑org>/hypermd-react.git
+cd hypermd-react
+npm install            # or yarn
+npm start              # opens http://localhost:3000
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Available Scripts
+| Command | What it does |
+|---------|--------------|
+| `npm start` | Runs the app in development mode with hot‑reload. |
+| `npm test` | Launches the test runner in interactive watch mode. |
+| `npm run build` | Builds an optimized production bundle in `build/`. |
+| `npm run eject` | **Irreversible** – copies CRA config locally so you can customize webpack/Babel/ESLint. |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
+```
+hypermd-react
+├─ public/            # Static assets & index.html
+└─ src/
+   ├─ components/     # React components
+   ├─ hooks/          # Custom React hooks
+   ├─ pages/          # Route components
+   ├─ styles/         # SCSS/CSS modules
+   ├─ utils/          # Helper functions
+   └─ index.tsx       # Entry point
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Built With
+| Package | Version | Purpose |
+|---------|---------|---------|
+| react | 18.2.0 | UI library |
+| react-dom | 18.2.0 | DOM renderer |
+| react-router-dom | 6.10.0 | Declarative routing |
+| marked | 4.3.0 | Markdown → HTML parser |
+| highlight.js | 11.7.0 | Syntax highlighting |
+| uuid | 9.0.0 | Unique ID generation |
+| react-scripts | 5.0.1 | CRA build config |
+| @testing-library/* | 13‑14 | Testing utilities |
+| web-vitals | 2.1.4 | Performance metrics |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> See **package.json** for the full list of dependencies and versions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Fork** the repository.
+2. **Create** your feature branch: `git checkout -b feat/amazing-feature`.
+3. **Commit** your changes: `git commit -m 'feat: add amazing feature'`.
+4. **Push** to the branch: `git push origin feat/amazing-feature`.
+5. Create a **Pull Request**.
 
-### Analyzing the Bundle Size
+Please make sure your code lints and tests pass before submitting. ❤️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## License
+Distributed under the **MIT License** – see the [`LICENSE`](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Kudos
+- [Create React App](https://github.com/facebook/create-react-app) for the project scaffold.
+- [marked](https://github.com/markedjs/marked) for fast Markdown parsing.
+- [highlight.js](https://github.com/highlightjs/highlight.js) for gorgeous code highlighting.
 
